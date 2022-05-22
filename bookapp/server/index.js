@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 mongoose.connect(
-  "mongodb+srv://beyza:1234@cluster0.t4fdk.mongodb.net/bookstore-app?retryWrites=true&w=majority"
+  "mongodb+srv://{userName}:{password}@cluster0.t4fdk.mongodb.net/bookstore-app?retryWrites=true&w=majority"
 );
 app.get("/getBooks", (req, res) => {
   BookModel.find({}, (err, result) => {
